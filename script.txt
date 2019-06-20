@@ -1,0 +1,9 @@
+1. Criar a pasta app e definir a aplicação Flask dentro do __init__
+2. Criar estrutura básica da api com um GET pré-definido
+3. Fazer uma pasta de rotas com as views
+4. Configurar a aplicação em um arquivo config.py
+5. Criar banco de dados no Atlas
+6. Configurar o banco de dados no arquivo Config.py
+7. criar modelos do banco com Mongo
+Alchemy
+
