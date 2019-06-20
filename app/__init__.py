@@ -10,6 +10,6 @@ ma = Marshmallow(app)
 
 
 from .models import users, posts, commentaries
-from .views import index, users
+from .views import index, users, helper
 from .routes import routes
 

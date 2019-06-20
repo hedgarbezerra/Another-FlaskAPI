@@ -5,15 +5,22 @@ from ..views import users, index, helper
 """Neste arquivo iremos criar todas rotas para aplicação para manter o código limpo usando
  as views(controllers)  e as relacionando por meio de funções"""
 
+
 @app.route('/v1', methods=['GET'])
 @helper.token_required
-def index():
-    return index.index()
+def root_url():
+    return index.root()
 
 
 @app.route('/', methods=['GET'])
+@helper.token_required
 def redirect():
-    return index.index_redirect()
+    return index.root()
+
+
+@app.route('/v1/authenticate', methods=['POST'])
+def authenticate():
+    return helper.auth()
 
 
 @app.route('/v1/users', methods=['GET'])
