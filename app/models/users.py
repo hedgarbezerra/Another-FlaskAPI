@@ -2,7 +2,7 @@ import datetime
 from app import db, ma
 
 
-"""Definição da classe dos usuários e seus campos"""
+"""Definição da classe/tabela dos usuários e seus campos"""
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
@@ -26,5 +26,5 @@ class UsersSchema(ma.Schema):
         fields = ('id', 'username', 'name', 'email', 'password', 'created_on')
 
 
-user_schema = UsersSchema(strict=True)
+user_schema = UsersSchema()
 users_schema = UsersSchema(strict=True, many=True)

@@ -7,7 +7,6 @@ import jwt
 from werkzeug.security import check_password_hash
 
 
-"""Fazendo a autenticação com JWT(JSON Web Token)"""
 def token_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):

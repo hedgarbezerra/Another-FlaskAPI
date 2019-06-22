@@ -15,12 +15,12 @@ passwd = config['DATABASE']['passwd']
 database = config['DATABASE']['db']
 host = config['DATABASE']['host']
 port = int(config['DATABASE']['port'])
-
-# Gera uma chave aleatória para aplicação a cada execução do servidor
 gen = string.ascii_letters + string.digits + string.ascii_uppercase
 key = ''.join(random.choice(gen) for i in range(12))
 
 # Definições do banco de dados e app
+# Gera uma chave aleatória para aplicação a cada execução do servidor
+
 SQLALCHEMY_DATABASE_URI = f'mysql://{user}:{passwd}@{host}:{port}/{database}'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = key

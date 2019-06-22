@@ -1,5 +1,6 @@
 from app import app
-from ..views import users, index, helper
+from flask import jsonify, url_for, redirect
+from ..views import users, helper
 
 
 """Neste arquivo iremos criar todas rotas para aplicação para manter o código limpo usando
@@ -8,14 +9,8 @@ from ..views import users, index, helper
 
 @app.route('/v1', methods=['GET'])
 @helper.token_required
-def root_url():
-    return index.root()
-
-
-@app.route('/', methods=['GET'])
-@helper.token_required
-def redirect():
-    return index.root()
+def root(current_user):
+    return jsonify({'message': f'Hello {current_user.name}'})
 
 
 @app.route('/v1/authenticate', methods=['POST'])
