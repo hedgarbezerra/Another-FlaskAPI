@@ -2,7 +2,7 @@
  
 ## How-To
 
-#Endpoint de usuários
+# Endpoint de usuários
 
 ### Listar todos usuários
 
