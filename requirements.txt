@@ -5,7 +5,7 @@ SQLAlchemy==1.3.3
 Markdown==3.1
 marshmallow==2.19.2
 marshmallow-sqlalchemy==0.16.3
-Werkzeug==0.15.2
+Werkzeug==0.15.3
 PyJWT==1.7.1
 flask_marshmallow==0.10.1
 flask-heroku==0.1.9
